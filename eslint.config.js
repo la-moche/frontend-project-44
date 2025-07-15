@@ -9,14 +9,13 @@ export default defineConfig([
     languageOptions: {
       globals: globals.node,
     },
-    rules: {
-      // Ваши правила ESLint
-      ...js.rules,
-      // Активируем prettier как правило
-      "prettier/prettier": "error",
-    },
     plugins: {
       prettier: prettierPlugin,
+    },
+    rules: {
+      ...js.rules,
+      // Прочие ваши правила ESLint
+      "prettier/prettier": "error", // Активируем Prettier как правило ESLint
     },
   },
 ]);
