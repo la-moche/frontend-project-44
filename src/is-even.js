@@ -1,13 +1,3 @@
-import readlineSync from 'readline-sync';
-import greetUser from '../src/cli.js';
-
-const userName = greetUser();
-const isEven = (num) => num % 2 === 0;
-const getRandomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
-
-console.log(`Answer "yes" if the number is even, otherwise answer "no".`);
-
 const game = () => {
   let isCorrect = true;
   let answer;
@@ -19,7 +9,12 @@ const game = () => {
     const randomNum = getRandomInt(min, max);
     answer = readlineSync.question(`Question: ${randomNum}\nYour answer: `);
 
-    isEven(randomNum) ? (correctAnswer = 'yes') : (correctAnswer = 'no');
+    // Извлечение присваивания correctAnswer
+    if (isEven(randomNum)) {
+      correctAnswer = 'yes';
+    } else {
+      correctAnswer = 'no';
+    }
 
     if (answer.toLowerCase() === correctAnswer) {
       console.log(`Correct!`);
