@@ -1,11 +1,11 @@
-import globals from "globals";
-import { defineConfig } from "eslint/config";
-import js from "@eslint/js";
-import prettierPlugin from "eslint-plugin-prettier";
+import globals from 'globals';
+import { defineConfig } from 'eslint/config';
+import js from '@eslint/js';
+import prettierPlugin from 'eslint-plugin-prettier';
 
 export default defineConfig([
   {
-    files: ["**/*.{js,mjs,cjs}"],
+    files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
       globals: globals.node,
     },
@@ -14,8 +14,12 @@ export default defineConfig([
     },
     rules: {
       ...js.rules,
-      // Прочие ваши правила ESLint
-      "prettier/prettier": "error", // Активируем Prettier как правило ESLint
+      'prettier/prettier': [
+        'error',
+        { semi: true, singleQuote: true, trailingComma: 'all' },
+      ],
+      semi: ['error', 'always'],
+      'prefer-const': 'error',
     },
   },
 ]);
