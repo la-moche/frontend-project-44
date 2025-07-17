@@ -1,14 +1,16 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../src/cli.js';
-import _ from 'lodash'; // Импортируем Lodash
 
 const userName = greetUser();
 
 const getRandomInt = (min, max) => {
-  return _.random(min, max); // Генерируем случайное целое число от min до max
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 const isEven = (num) => num % 2 === 0; // Функция для проверки четности
+
 
 const game = () => {
   let isCorrect = true;
