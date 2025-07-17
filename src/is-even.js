@@ -1,3 +1,17 @@
+import readlineSync from 'readline-sync';
+import greetUser from '../src/cli.js';
+
+const userName = greetUser();
+
+const getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+const isEven = (num) => num % 2 === 0; // Функция для проверки четности
+
+
 const game = () => {
   let isCorrect = true;
   let answer;
