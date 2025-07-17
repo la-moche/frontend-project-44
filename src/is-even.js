@@ -1,14 +1,22 @@
 import readlineSync from 'readline-sync';
 import greetUser from '../src/cli.js';
-import _ from 'lodash'; // Импортируем Lodash
-
-const userName = greetUser();
+import crypto from 'crypto'; // Импортируем модуль crypto
 
 const getRandomInt = (min, max) => {
-  return _.random(min, max); // Генерируем случайное целое число от min до max
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  
+  // Генерируем случайные байты
+  const randomBuffer = crypto.randomBytes(4); // 4 байта для получения 32-битного числа
+  const randomValue = randomBuffer.readUInt32BE(0); // Читаем значение как 32-битное беззнаковое целое
+
+  // Преобразуем случайное значение в нужный диапазон
+  return (randomValue % (max - min + 1)) + min;
 };
 
 const isEven = (num) => num % 2 === 0; // Функция для проверки четности
+
+const userName = greetUser();
 
 const game = () => {
   let isCorrect = true;
