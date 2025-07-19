@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import greetUser from '../src/cli.js';
+import greetUser from '../cli.js';
 import crypto from 'crypto'; // Импортируем модуль crypto
 
 const getRandomInt = (min, max) => {
@@ -18,7 +18,7 @@ const isEven = (num) => num % 2 === 0; // Функция для проверки
 
 const userName = greetUser();
 
-const game = () => {
+const gameEven = () => {
   let isCorrect = true;
   let answer;
   let correctAnswer;
@@ -54,4 +54,5 @@ const game = () => {
   }
 };
 
-export default game;
+export default gameEven;
+
