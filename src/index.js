@@ -12,7 +12,7 @@ const getRandomInt = (min, max) => {
   return (randomValue % (max - min + 1)) + min;
 };
 
-const playGame = (gameLogic) => {
+const playGame = (gameLogic, checkAnswer) => {
   const userName = greetUser();
   console.log(gameLogic.intro);
 
@@ -20,7 +20,7 @@ const playGame = (gameLogic) => {
     const { question, correctAnswer } = gameLogic.getQuestion();
     const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
 
-    if (userAnswer.toLowerCase() === correctAnswer) {
+    if (checkAnswer(userAnswer, correctAnswer)) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
