@@ -5,7 +5,7 @@ import crypto from 'crypto'; // Импортируем модуль crypto
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
-  
+
   // Генерируем случайные байты
   const randomBuffer = crypto.randomBytes(4); // 4 байта для получения 32-битного числа
   const randomValue = randomBuffer.readUInt32BE(0); // Читаем значение как 32-битное беззнаковое целое
@@ -55,4 +55,3 @@ const gameEven = () => {
 };
 
 export default gameEven;
-
