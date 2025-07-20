@@ -19,39 +19,27 @@ const isEven = (num) => num % 2 === 0; // Функция для проверки
 const userName = greetUser();
 
 const gameEven = () => {
-  let isCorrect = true;
-  let answer;
-  let correctAnswer;
-  const min = 0;
-  const max = 100;
-
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  
   for (let i = 0; i < 3; i += 1) {
-    const randomNum = getRandomInt(min, max);
-    answer = readlineSync.question(`Question: ${randomNum}\nYour answer: `);
+    const randomNum = getRandomInt(0, 100);
+    const userAnswer = readlineSync.question(`Question: ${randomNum}\nYour answer: `);
 
-    // Извлечение присваивания correctAnswer
-    if (isEven(randomNum)) {
-      correctAnswer = 'yes';
-    } else {
-      correctAnswer = 'no';
-    }
+    // Определяем правильный ответ
+    const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
 
-    if (answer.toLowerCase() === correctAnswer) {
-      console.log(`Correct!`);
+    if (userAnswer.toLowerCase() === correctAnswer) {
+      console.log('Correct!');
     } else {
-      isCorrect = false;
-      break;
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
+      );
+      console.log(`Let's try again, ${userName}!`);
+      return; // Завершаем игру при неправильном ответе
     }
   }
 
-  if (isCorrect) {
-    console.log(`Congratulations, ${userName}!`);
-  } else {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
-    );
-    console.log(`Let's try again, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default gameEven;
