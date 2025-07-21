@@ -13,3 +13,7 @@
 ### Run brain-calc.js:
 
 [![asciicast](https://asciinema.org/a/MfCdvOeoTOUFrjhjWVxQiotyw.svg)](https://asciinema.org/a/MfCdvOeoTOUFrjhjWVxQiotyw)
+
+### Run brain-gcd.js:
+
+[![asciicast](https://asciinema.org/a/XFCDOFX3oidgtvTtQIbFVS6TD.svg)](https://asciinema.org/a/XFCDOFX3oidgtvTtQIbFVS6TD)

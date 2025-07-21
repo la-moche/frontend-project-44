@@ -18,12 +18,16 @@ const playGame = (gameLogic, checkAnswer) => {
 
   for (let i = 0; i < MAX_ROUNDS; i++) {
     const { question, correctAnswer } = gameLogic.getQuestion();
-    const userAnswer = readlineSync.question(`Question: ${question}\nYour answer: `);
+    const userAnswer = readlineSync.question(
+      `Question: ${question}\nYour answer: `,
+    );
 
     if (checkAnswer(userAnswer, correctAnswer)) {
       console.log('Correct!');
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
+      );
       console.log(`Let's try again, ${userName}!`);
       return;
     }
