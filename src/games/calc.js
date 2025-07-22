@@ -22,8 +22,7 @@ const generateQuestion = () => {
   const num1 = getRandomInt(1, 25);
   const num2 = getRandomInt(1, 25);
   const operation = operations[getRandomInt(0, operations.length - 1)];
-  const operationSymbol = operation === '*' ? '×' : operation;
-  const question = `${num1} ${operationSymbol} ${num2}`;
+  const question = `${num1} ${operation} ${num2}`;
   const correctAnswer = calculate(num1, num2, operation);
   return { question, correctAnswer };
 };
