@@ -1,7 +1,7 @@
-import globals from 'globals';
-import { defineConfig } from 'eslint/config';
-import js from '@eslint/js';
-import prettierPlugin from 'eslint-plugin-prettier';
+import globals from 'globals'
+import { defineConfig } from 'eslint/config'
+import js from '@eslint/js'
+import prettierPlugin from 'eslint-plugin-prettier'
 
 export default defineConfig([
   {
@@ -16,10 +16,11 @@ export default defineConfig([
       ...js.rules,
       'prettier/prettier': [
         'error',
-        { semi: true, singleQuote: true, trailingComma: 'all' },
+        { semi: false, singleQuote: true, trailingComma: 'all' }, // Убираем точки с запятой
       ],
-      semi: ['error', 'always'],
+      semi: ['error', 'never'], // Запрещаем точки с запятой
+      'no-extra-semi': 'error', // Удаляет лишние точки с запятой
       'prefer-const': 'error',
     },
   },
-]);
+])
