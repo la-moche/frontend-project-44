@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import greetUser from './cli.js';
 import crypto from 'crypto';
 
-const MAX_ROUNDS = 3; // Максимальное количество раундов
+const MAX_ROUNDS = 3;
 
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);

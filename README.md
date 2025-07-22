@@ -17,3 +17,7 @@
 ### Run brain-gcd.js:
 
 [![asciicast](https://asciinema.org/a/XFCDOFX3oidgtvTtQIbFVS6TD.svg)](https://asciinema.org/a/XFCDOFX3oidgtvTtQIbFVS6TD)
+
+### Run brain-progression.js:
+
+[![asciicast](https://asciinema.org/a/eSwxHqFxUKhORWK4Tmrk92gRi.svg)](https://asciinema.org/a/eSwxHqFxUKhORWK4Tmrk92gRi)
