@@ -3,7 +3,8 @@ import { getRandomInt, playGame } from '../index.js'
 const calcGcd = (num1, num2) => {
   if (num2 === 0) {
     return num1
-  } else {
+  }
+  else {
     return calcGcd(num2, num1 % num2)
   }
 }

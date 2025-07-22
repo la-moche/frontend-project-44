@@ -33,8 +33,8 @@ const generateQuestion = () => {
     quantityOfElements,
     indexOfHidElement,
   )
-  const { numbersWithHidNumber, hiddenNumber: correctAnswer } =
-    questionAndAnswer
+  const { numbersWithHidNumber, hiddenNumber: correctAnswer }
+    = questionAndAnswer
   const question = numbersWithHidNumber.join(' ')
   return { question, correctAnswer }
 }
