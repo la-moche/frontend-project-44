@@ -41,7 +41,7 @@ const generateQuestion = () => {
 
 const gameProgression = () => {
   const gameLogic = {
-    intro: 'What is the result of the expression?',
+    intro: 'What number is missing in the progression?',
     getQuestion: generateQuestion,
   };
 
