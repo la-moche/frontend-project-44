@@ -21,3 +21,7 @@
 ### Run brain-progression.js:
 
 [![asciicast](https://asciinema.org/a/eSwxHqFxUKhORWK4Tmrk92gRi.svg)](https://asciinema.org/a/eSwxHqFxUKhORWK4Tmrk92gRi)
+
+### Run brain-prime.js:
+
+[![asciicast](https://asciinema.org/a/GC7jyKqrbESslsD77GDTAAYBa.svg)](https://asciinema.org/a/GC7jyKqrbESslsD77GDTAAYBa)
